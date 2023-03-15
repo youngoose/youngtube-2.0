@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# YoungTube 2.0.0 - Youtube clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This project is the 2nd version of my initial Youtube clone project.
 
-In the project directory, you can run:
+The 1st project had built and developed myself from scratch without any tutorial but official documentation.
 
-### `yarn start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Objective
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The purpose of developing this 2nd version is to enhance and refactor based on new knowledge I gained from video materials.
 
-### `yarn test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development plan for enhancement based on version 1.0.0
 
-### `yarn build`
+- implement axios
+- re-use the video component
+- hide key to .env and use it with axios
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# YoungTube 1.0.0 - Youtube clone
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Since YoungTube 1.0.0 is private repo, please refer to the below description regarding what had been done on initial version. The current live application is not public since there is limited number of Youtube API call.
 
-### `yarn eject`
+- Landing page
+  <img src="https://user-images.githubusercontent.com/29807797/217262704-7ff4712a-4613-4446-8973-876f366e27d1.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Video detail page
+  <img src="https://user-images.githubusercontent.com/29807797/217263066-83948c14-d77d-4577-9479-eb8bb4b7b6b1.png">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Responsive video viewport using tailwind CSS aspect-ratio
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Medium size for iPad
+  <img src="https://user-images.githubusercontent.com/29807797/217263752-fcde6d84-9ef5-41f1-92f6-25c0d3f59c32.png">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img src="https://user-images.githubusercontent.com/29807797/217264025-b2d6bbb6-fe2a-49f0-b611-e8f73844c52a.png">
 
-## Learn More
+- Small zise for mobile
+  <img src="https://user-images.githubusercontent.com/29807797/217263426-52ab0936-2b14-4359-b47f-0930defeca33.png">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Highlights
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Developed from scratch myself without following any blogs or tutorial
 
-### Code Splitting
+- Tried using the official docs as much as possible
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Optimized JIRA Kanban board
+  <img src="https://user-images.githubusercontent.com/29807797/217259073-f0519503-95a4-4656-a265-fac5f2faaac2.png" width=70% height=60%>
 
-### Analyzing the Bundle Size
+- Worked on this for 2 weeks
+  <img src="https://user-images.githubusercontent.com/29807797/217260025-dc586ae9-f792-46b9-a167-a4cb38fd59ff.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Used CD with GitHub + Netlify
 
-### Making a Progressive Web App
+- Deployed on Netlify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Functionality
 
-### Advanced Configuration
+- 25 videos for each search
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Initial mock data on landing page (search keyword 'bts')
 
-### Deployment
+- Related videos (max 25) on video detail page when click on one video
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Packages
 
-### `yarn build` fails to minify
+- react version 18.2.0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- react-router
+
+- react-query (tanstack query)
+
+- react-icons
+
+- tailwind CSS
+
+- tailwind aspect-ratio
+
+- moment js
+
+## Open source
+
+- Youtube API
+
+## Deployment
+
+- Netlify
