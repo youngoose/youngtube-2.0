@@ -19,6 +19,8 @@ The purpose of developing this 2nd version is to enhance and refactor based on n
 - implement axios
 - re-use the video component
 - hide key to .env and use it with axios
+- add context API to wrap the global state using class
+- add unit tests
 
 <br>
 
