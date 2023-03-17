@@ -51,9 +51,11 @@ Since YoungTube 1.0.0 is private repo, please refer to the below description reg
 - Tried using the official docs as much as possible
 
 - Optimized JIRA Kanban board
+
   <img src="https://user-images.githubusercontent.com/29807797/217259073-f0519503-95a4-4656-a265-fac5f2faaac2.png" width=70% height=60%>
 
-- Worked on this for 2 weeks
+- Worked on this for 2 weeks (within 1 sprint deadline myself)
+
   <img src="https://user-images.githubusercontent.com/29807797/217260025-dc586ae9-f792-46b9-a167-a4cb38fd59ff.png">
 
 - Used CD with GitHub + Netlify
