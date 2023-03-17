@@ -29,19 +29,23 @@ The purpose of developing this 2nd version is to enhance and refactor based on n
 Since YoungTube 1.0.0 is private repo, please refer to the below description regarding what had been done on initial version. The current live application is not public since there is limited number of Youtube API call.
 
 - Landing page
+  
   <img src="https://user-images.githubusercontent.com/29807797/217262704-7ff4712a-4613-4446-8973-876f366e27d1.png">
 
 - Video detail page
+  
   <img src="https://user-images.githubusercontent.com/29807797/217263066-83948c14-d77d-4577-9479-eb8bb4b7b6b1.png">
 
 - Responsive video viewport using tailwind CSS aspect-ratio
 
 - Medium size for iPad
+  
   <img src="https://user-images.githubusercontent.com/29807797/217263752-fcde6d84-9ef5-41f1-92f6-25c0d3f59c32.png">
 
-<img src="https://user-images.githubusercontent.com/29807797/217264025-b2d6bbb6-fe2a-49f0-b611-e8f73844c52a.png">
+  <img src="https://user-images.githubusercontent.com/29807797/217264025-b2d6bbb6-fe2a-49f0-b611-e8f73844c52a.png">
 
 - Small zise for mobile
+  
   <img src="https://user-images.githubusercontent.com/29807797/217263426-52ab0936-2b14-4359-b47f-0930defeca33.png">
 
 ## Highlights
