@@ -30,15 +30,11 @@ export default function VideoDetail() {
           ></iframe>
 
           <div className="p-8">
-            <p className="font-bold">{title}</p>
-
+            <p className="font-bold text-xl">{title}</p>
             <p className="text-md ont-semibold text-gray-400">{channelTitle}</p>
-
-            <div className="mt-2 pl-5 pb-5 shadow-lg rounded-lg bg-zinc-800">
-              <pre className="text-sm -ml-2 pt-3 -mb-1 font-semibold">
-                {description}
-              </pre>
-            </div>
+            <pre className="whitespace-pre-wrap text-sm -ml-2 pt-3 -mb-1 font-semibold">
+              {description}
+            </pre>
           </div>
         </div>
 

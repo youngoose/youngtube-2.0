@@ -48,7 +48,7 @@ export default function RelatedVideos({ videoId }) {
   if (error) return <p>Error!!</p>;
 
   return (
-    <div className="lg:ml-[2rem] lg:w-[22rem] mt-3 lg:mt-0">
+    <div className="lg:ml-2 mt-3 mx-2 lg:mt-0">
       {relatedContents.map((item, index) => (
         <div key={index}>
           <button
@@ -72,7 +72,7 @@ export default function RelatedVideos({ videoId }) {
               </div>
 
               <div>
-                <div className="font-bold hover:text-gray-400 flex-grow overflow-hidden lg:text-xs md:text-lg lg:max-w-[170px] md:max-w-[30rem] lg:text-ellipsis lg:whitespace-nowrap text-sm">
+                <div className="whitespace-pre-wrap">
                   {decodeHtml(item.snippet.title)}
                 </div>
                 <p className="pb-1 lg:text-xs text-xs md:text-lg md:mt-4">
