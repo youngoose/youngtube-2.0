@@ -14,13 +14,18 @@ The purpose of developing this 2nd version is to enhance and refactor based on n
 
 <br>
 
-## Development plan for enhancement based on version 1.0.0 - WIP with commit links
+## Development plan for version 2.0.0 enhancement based on version 1.0.0 - WIP with commit links
 
 - [implement axios](https://github.com/youngoose/youngtube-2.0/commit/1f807d829707317d54f80689031a339799dff9c0)
 - [hide key to .env and use it with axios](https://github.com/youngoose/youngtube-2.0/commit/1f807d829707317d54f80689031a339799dff9c0)
 - re-use the video component
 - add context API to wrap the global state using class
 - add unit tests
+
+Great to implment for 3.0.0
+- add typescript
+- add login function for watch later
+- add Node and express as backend
 
 <br>
 
