@@ -17,7 +17,6 @@ export default function Root() {
   return (
     <QueryClientProvider client={queryClient}>
       <Searchbar onSearch={handleSearch} />
-      <hr className="w-11/12 mx-auto h-px md:mt-5 mt-3 bg-gray-500 border-0 dark:bg-gray-700" />
       <Outlet context={keyword} />
       <ReactQueryDevtools initialIsOpen={true} />
     </QueryClientProvider>

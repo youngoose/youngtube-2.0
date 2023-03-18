@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { AiFillYoutube } from 'react-icons/ai';
-import { GoSearch } from 'react-icons/go';
+import { BsYoutube, BsSearch } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
 export default function Searchbar({ onSearch }) {
@@ -15,25 +14,23 @@ export default function Searchbar({ onSearch }) {
   };
 
   return (
-    <header className="grid grid-flow-col lg:grid-cols-8 md:grid-cols-4 sm:w-11/12 md:mt-5 lg:mb-2 md:mx-7 mt-3 mx-[20px]">
-      <Link to={'/'}>
-        <div className="flex">
-          <button className="text-3xl text-red-600">
-            <AiFillYoutube />
-          </button>
-          <span className="ml-1 font-bold">YoungTube</span>
-        </div>
+    <header className="w-full flex p-4 text-2xl border-b border-zinc-600 mb-4">
+      <Link to={'/'} className="flex items-center">
+        <button className="text-4xl text-brand">
+          <BsYoutube />
+        </button>
+        <h1 className="ml-1 font-bold">YoungTube</h1>
       </Link>
-      <form className="flex w-48" onSubmit={handleSearch}>
+      <form className="w-full flex justify-center" onSubmit={handleSearch}>
         <input
-          className="rounded-l-md border-none outline-none text-black z-0 border-r-0"
+          className="w-7/12 p-2 border-none outline-none bg-black text-gray-50"
           type="text"
-          placeholder=" Search"
+          placeholder=" Search..."
           onChange={handleChange}
           value={text}
         />
-        <button className="hover:bg-gray-600 border border-gray-600 rounded-r-md cursor-pointer -ml-0.5 border-l-0">
-          <GoSearch className="mx-2" />
+        <button className="bg-zinc-600 px-4">
+          <BsSearch />
         </button>
       </form>
     </header>
