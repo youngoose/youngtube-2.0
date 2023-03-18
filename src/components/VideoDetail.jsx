@@ -20,13 +20,14 @@ export default function VideoDetail() {
     <Wrapper>
       <div className="grid xl:grid-cols-[4.8fr_1.5fr] md:mx-[2.5rem] mx-[1.1rem] md:mt-5 mt-2">
         <div>
-          <div className="aspect-w-16 aspect-h-9">
+          <div className="basis-4/6">
             <iframe
+              id="player"
+              type="text/html"
+              width="100%"
+              height="640"
               src={videoURL}
               title={title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
             ></iframe>
           </div>
 

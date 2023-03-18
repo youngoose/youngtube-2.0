@@ -28,7 +28,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@tailwindcss/aspect-ratio", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:0.4.2"],\
             ["@tanstack/react-query", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:4.26.1"],\
             ["@tanstack/react-query-devtools", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:4.26.1"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
@@ -4173,28 +4172,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@svgr/plugin-jsx", "npm:5.5.0"],\
             ["@svgr/plugin-svgo", "npm:5.5.0"],\
             ["loader-utils", "npm:2.0.4"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@tailwindcss/aspect-ratio", [\
-        ["npm:0.4.2", {\
-          "packageLocation": "./.yarn/cache/@tailwindcss-aspect-ratio-npm-0.4.2-f690711eea-e998fcb0c1.zip/node_modules/@tailwindcss/aspect-ratio/",\
-          "packageDependencies": [\
-            ["@tailwindcss/aspect-ratio", "npm:0.4.2"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:0.4.2", {\
-          "packageLocation": "./.yarn/__virtual__/@tailwindcss-aspect-ratio-virtual-d67c2d1b57/0/cache/@tailwindcss-aspect-ratio-npm-0.4.2-f690711eea-e998fcb0c1.zip/node_modules/@tailwindcss/aspect-ratio/",\
-          "packageDependencies": [\
-            ["@tailwindcss/aspect-ratio", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:0.4.2"],\
-            ["@types/tailwindcss", null],\
-            ["tailwindcss", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:3.2.7"]\
-          ],\
-          "packagePeers": [\
-            "@types/tailwindcss",\
-            "tailwindcss"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17808,7 +17785,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["youngtube-2.0", "workspace:."],\
-            ["@tailwindcss/aspect-ratio", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:0.4.2"],\
             ["@tanstack/react-query", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:4.26.1"],\
             ["@tanstack/react-query-devtools", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:4.26.1"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\

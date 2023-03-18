@@ -15,11 +15,7 @@ export default function Videos() {
   } = useQuery(
     ['contents', keyword],
     async () => {
-      return axios
-        .get(`videos/${keyword ? 'search' : 'popular'}.json`)
-        .then((res) => {
-          return res.data.items;
-        });
+      return keyword ? search() : mostPopular();
     },
     // prevent refetching for 5 mins
     { staleTime: 1000 * 60 * 5 }
@@ -34,6 +30,42 @@ export default function Videos() {
         channelTitle: decodeHtml(channelTitle),
       },
     });
+  };
+
+  const search = () => {
+    return axios
+      .create({
+        baseURL: 'https://youtube.googleapis.com/youtube/v3',
+        params: { key: process.env.REACT_APP_YOUTUBE_API_KEY },
+      })
+      .get('search', {
+        params: {
+          part: 'snippet',
+          maxResults: 25,
+          q: keyword,
+        },
+      })
+      .then((res) => {
+        return res.data.items;
+      });
+  };
+
+  const mostPopular = () => {
+    return axios
+      .create({
+        baseURL: 'https://youtube.googleapis.com/youtube/v3',
+        params: { key: process.env.REACT_APP_YOUTUBE_API_KEY },
+      })
+      .get('videos', {
+        params: {
+          part: 'snippet',
+          chart: 'mostPopular',
+          maxResults: 25,
+        },
+      })
+      .then((res) => {
+        return res.data.items;
+      });
   };
 
   if (isLoading) return <p>Loading...</p>;
