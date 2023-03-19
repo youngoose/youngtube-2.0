@@ -72,11 +72,11 @@ export default function RelatedVideos({ videoId }) {
               </div>
 
               <div>
-                <div className="">{decodeHtml(item.snippet.title)}</div>
-                <p className="pb-1 lg:text-xs text-xs md:text-lg md:mt-4 font-semibold text-gray-400">
+                <p>{decodeHtml(item.snippet.title)}</p>
+                <p className="text-gray-400 font-semibold">
                   {item.snippet.channelTitle}
                 </p>
-                <div className="pb-1 lg:text-xs md:text-lg">
+                <div className="mt-5 pb-1">
                   <span>{timeAgo(item.snippet.publishTime)}</span>
                 </div>
               </div>
