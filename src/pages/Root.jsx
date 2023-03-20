@@ -3,6 +3,7 @@ import { useNavigate, Outlet } from 'react-router-dom';
 import Searchbar from '../components/Searchbar';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { YoutubeApiProvider } from '../context/YoutubeApiContext';
 
 const queryClient = new QueryClient();
 
@@ -15,10 +16,14 @@ export default function Root() {
   };
 
   return (
-    <QueryClientProvider client={queryClient}>
+    <>
       <Searchbar onSearch={handleSearch} />
-      <Outlet context={keyword} />
-      <ReactQueryDevtools initialIsOpen={true} />
-    </QueryClientProvider>
+      <YoutubeApiProvider>
+        <QueryClientProvider client={queryClient}>
+          <Outlet context={keyword} />
+          <ReactQueryDevtools initialIsOpen={true} />
+        </QueryClientProvider>
+      </YoutubeApiProvider>
+    </>
   );
 }

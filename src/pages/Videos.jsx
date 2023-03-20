@@ -3,10 +3,11 @@ import moment from 'moment';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import Card from '../components/Card';
-import axios from 'axios';
+import { useYoutubeApi } from '../context/YoutubeApiContext';
 
 export default function Videos() {
   const keyword = useOutletContext();
+  const { youtube } = useYoutubeApi();
 
   const {
     isLoading,
@@ -14,9 +15,7 @@ export default function Videos() {
     data: contents,
   } = useQuery(
     ['contents', keyword],
-    async () => {
-      return keyword ? search() : mostPopular();
-    },
+    () => youtube.search(keyword),
     // prevent refetching for 5 mins
     { staleTime: 1000 * 60 * 5 }
   );
@@ -30,42 +29,6 @@ export default function Videos() {
         channelTitle: decodeHtml(channelTitle),
       },
     });
-  };
-
-  const search = () => {
-    return axios
-      .create({
-        baseURL: 'https://youtube.googleapis.com/youtube/v3',
-        params: { key: process.env.REACT_APP_YOUTUBE_API_KEY },
-      })
-      .get('search', {
-        params: {
-          part: 'snippet',
-          maxResults: 25,
-          q: keyword,
-        },
-      })
-      .then((res) => {
-        return res.data.items;
-      });
-  };
-
-  const mostPopular = () => {
-    return axios
-      .create({
-        baseURL: 'https://youtube.googleapis.com/youtube/v3',
-        params: { key: process.env.REACT_APP_YOUTUBE_API_KEY },
-      })
-      .get('videos', {
-        params: {
-          part: 'snippet',
-          chart: 'mostPopular',
-          maxResults: 25,
-        },
-      })
-      .then((res) => {
-        return res.data.items;
-      });
   };
 
   if (isLoading) return <p>Loading...</p>;
@@ -97,7 +60,9 @@ export default function Videos() {
               </div>
             </div>
           </button>
-          <p className="pl-1 pb-4">{item.snippet.channelTitle}</p>
+          <p className="pl-1 pb-4 text-gray-400 font-semibold">
+            {item.snippet.channelTitle}
+          </p>
           <div className="pl-1 pb-2">
             <span>{timeAgo(item.snippet.publishTime)}</span>
           </div>
