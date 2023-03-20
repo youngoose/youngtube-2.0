@@ -3,10 +3,11 @@ import moment from 'moment';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import Card from '../components/Card';
-import Youtube from '../api/youtube';
+import { useYoutubeApi } from '../context/YoutubeApiContext';
 
 export default function Videos() {
   const keyword = useOutletContext();
+  const { youtube } = useYoutubeApi();
 
   const {
     isLoading,
@@ -14,10 +15,7 @@ export default function Videos() {
     data: contents,
   } = useQuery(
     ['contents', keyword],
-    () => {
-      const youtube = new Youtube();
-      return youtube.search(keyword);
-    },
+    () => youtube.search(keyword),
     // prevent refetching for 5 mins
     { staleTime: 1000 * 60 * 5 }
   );
