@@ -25,7 +25,7 @@ The purpose of developing this 2nd version is to enhance and refactor based on n
 Great to implment for 3.0.0
 - add typescript
 - add login function for watch later
-- add Node and express as backend
+- develop with Next.js
 
 <br>
 
