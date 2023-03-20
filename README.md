@@ -18,8 +18,8 @@ The purpose of developing this 2nd version is to enhance and refactor based on n
 
 - [implement axios](https://github.com/youngoose/youngtube-2.0/commit/1f807d829707317d54f80689031a339799dff9c0)
 - [hide key to .env and use it with axios](https://github.com/youngoose/youngtube-2.0/commit/1f807d829707317d54f80689031a339799dff9c0)
-- [re-use the video component](https://github.com/youngoose/youngtube-2.0/pull/5)
-- add context API to wrap the global state using class
+- [add context API to wrap the global state using class](https://github.com/youngoose/youngtube-2.0/pull/5)
+- re-use the video component
 - add unit tests
 
 Great to implment for 3.0.0
