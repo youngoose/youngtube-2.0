@@ -42,7 +42,7 @@ export default function Videos() {
             className="text-left"
             onClick={() =>
               handleVideoClick(
-                keyword ? item.id.videoId : item.id,
+                item.id,
                 item.snippet.title,
                 item.snippet.description,
                 item.snippet.channelTitle

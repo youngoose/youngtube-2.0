@@ -2,33 +2,18 @@ import React from 'react';
 import moment from 'moment';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { useYoutubeApi } from '../context/YoutubeApiContext';
 
 export default function RelatedVideos({ videoId }) {
+  const { youtube } = useYoutubeApi();
+
   const {
     isLoading,
     error,
     data: relatedContents,
   } = useQuery(
     ['relatedContents', videoId],
-    async () => {
-      return axios
-        .create({
-          baseURL: 'https://youtube.googleapis.com/youtube/v3',
-          params: { key: process.env.REACT_APP_YOUTUBE_API_KEY },
-        })
-        .get('search', {
-          params: {
-            part: 'snippet',
-            maxResults: 25,
-            relatedToVideoId: videoId,
-            type: 'video',
-          },
-        })
-        .then((res) => {
-          return res.data.items;
-        });
-    },
+    async () => youtube.relatedVideos(videoId),
     // prevent refetching for 5 mins
     { staleTime: 1000 * 60 * 5 }
   );
@@ -55,7 +40,7 @@ export default function RelatedVideos({ videoId }) {
             className="text-left"
             onClick={() =>
               handleVideoClick(
-                item.id.videoId,
+                item.id,
                 item.snippet.title,
                 item.snippet.description,
                 item.snippet.channelTitle
