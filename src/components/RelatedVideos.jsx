@@ -1,8 +1,9 @@
 import React from 'react';
-import moment from 'moment';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { useYoutubeApi } from '../context/YoutubeApiContext';
+import decodeHtml from '../util/decodeHtml';
+import timeAgo from '../util/date';
 
 export default function RelatedVideos({ videoId }) {
   const { youtube } = useYoutubeApi();
@@ -72,13 +73,3 @@ export default function RelatedVideos({ videoId }) {
     </div>
   );
 }
-
-const timeAgo = (time) => {
-  return moment(time).fromNow();
-};
-
-const decodeHtml = (html) => {
-  const txt = document.createElement('textarea');
-  txt.innerHTML = html;
-  return txt.value;
-};

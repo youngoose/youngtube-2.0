@@ -1,9 +1,10 @@
 import React from 'react';
-import moment from 'moment';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import Card from '../components/Card';
 import { useYoutubeApi } from '../context/YoutubeApiContext';
+import decodeHtml from '../util/decodeHtml';
+import timeAgo from '../util/date';
 
 export default function Videos() {
   const keyword = useOutletContext();
@@ -71,13 +72,3 @@ export default function Videos() {
     </Card>
   );
 }
-
-const timeAgo = (time) => {
-  return moment(time).fromNow();
-};
-
-const decodeHtml = (html) => {
-  const txt = document.createElement('textarea');
-  txt.innerHTML = html;
-  return txt.value;
-};
