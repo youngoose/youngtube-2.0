@@ -20,14 +20,14 @@ export default function VideoDetail() {
     <Wrapper>
       <div className="flex flex-col lg:flex-row mt-3">
         <div className="basis-4/6">
-          <iframe
-            id="player"
-            type="text/html"
-            width="100%"
-            height="640"
-            src={videoURL}
-            title={title}
-          ></iframe>
+          <div className="aspect-w-16 aspect-h-9">
+            <iframe
+              id="player"
+              type="text/html"
+              src={videoURL}
+              title={title}
+            ></iframe>
+          </div>
 
           <div className="p-8">
             <p className="text-xl font-bold">{title}</p>
