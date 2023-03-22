@@ -67,7 +67,7 @@ Since YoungTube 1.0.0 is private repo, please refer to the below description reg
 
   <img src="https://user-images.githubusercontent.com/29807797/217260025-dc586ae9-f792-46b9-a167-a4cb38fd59ff.png">
 
-- Used CD with GitHub + Netlify
+- Used GitHub + Netlify for CI/CD
 
 - Deployed on Netlify
 
