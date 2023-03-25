@@ -4,9 +4,11 @@ import RelatedVideos from './RelatedVideos';
 
 export default function VideoDetail() {
   const { videoId } = useParams();
-  const location = useLocation();
+  const {
+    state: { video },
+  } = useLocation();
+  const { title, description, channelTitle } = video.snippet;
   const videoURL = `https://www.youtube.com/embed/${videoId}`;
-  const { title, description, channelTitle } = location.state;
 
   const Wrapper = ({ children }) => {
     const location = useLocation();

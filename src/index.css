@@ -11,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #0f0f0f;
   height: 100vh;
+  list-style-type: none;
   @apply flex flex-col items-center;
 }
 
