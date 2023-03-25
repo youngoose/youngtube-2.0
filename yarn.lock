@@ -2477,6 +2477,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tailwindcss/aspect-ratio@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "@tailwindcss/aspect-ratio@npm:0.4.2"
+  peerDependencies:
+    tailwindcss: ">=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1"
+  checksum: e998fcb0c1a55cae4e83c4510fed0d4d1cba845b7ed79a18451f55377d4a177050c2401af59222662a216aa9c407ef49c475c93db8e13246e0bb3f1ed42f78f8
+  languageName: node
+  linkType: hard
+
 "@tanstack/match-sorter-utils@npm:^8.7.0":
   version: 8.7.6
   resolution: "@tanstack/match-sorter-utils@npm:8.7.6"
@@ -13223,6 +13232,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "youngtube-2.0@workspace:."
   dependencies:
+    "@tailwindcss/aspect-ratio": ^0.4.2
     "@tanstack/react-query": ^4.26.1
     "@tanstack/react-query-devtools": ^4.26.1
     "@testing-library/jest-dom": ^5.14.1
