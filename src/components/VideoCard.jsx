@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import decodeHtml from '../util/decodeHtml';
-import timeAgo from '../util/date';
+import { formatAgo } from '../util/date';
 
 export default function VideoCard({ video, type }) {
   const navigate = useNavigate();
-  const { title, thumbnails, channelTitle, publishTime } = video.snippet;
+  const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
   const isList = type === 'list';
 
   return (
@@ -29,7 +29,7 @@ export default function VideoCard({ video, type }) {
         <p className="pb-4 text-gray-400 font-semibold text-sm">
           {channelTitle}
         </p>
-        <p className="text-sm">{timeAgo(publishTime)}</p>
+        <p className="text-sm">{formatAgo(publishedAt)}</p>
       </div>
     </li>
   );

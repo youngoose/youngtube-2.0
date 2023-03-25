@@ -1,5 +1,8 @@
-import moment from 'moment';
+import { format, register } from 'timeago.js';
+import koLocale from 'timeago.js/lib/lang/ko';
 
-export default function timeAgo(time) {
-  return moment(time).fromNow();
+register('ko', koLocale);
+
+export function formatAgo(date, lang = 'en_US') {
+  return format(date, lang);
 }
