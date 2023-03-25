@@ -36,13 +36,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/user-event", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:13.5.0"],\
             ["axios", "npm:1.3.4"],\
             ["eslint-config-react-app", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:7.0.1"],\
-            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:18.2.0"],\
             ["react-icons", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:4.8.0"],\
             ["react-router-dom", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:6.9.0"],\
             ["react-scripts", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:5.0.1"],\
             ["tailwindcss", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:3.2.7"],\
+            ["timeago.js", "npm:4.0.2"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
           "linkType": "SOFT"\
@@ -12025,15 +12025,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["moment", [\
-        ["npm:2.29.4", {\
-          "packageLocation": "./.yarn/cache/moment-npm-2.29.4-902943305d-0ec3f9c2bc.zip/node_modules/moment/",\
-          "packageDependencies": [\
-            ["moment", "npm:2.29.4"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["ms", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/ms-npm-2.0.0-9e1101a471-0e6a22b8b7.zip/node_modules/ms/",\
@@ -16503,6 +16494,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["timeago.js", [\
+        ["npm:4.0.2", {\
+          "packageLocation": "./.yarn/cache/timeago.js-npm-4.0.2-e87d64f9a3-c785a06988.zip/node_modules/timeago.js/",\
+          "packageDependencies": [\
+            ["timeago.js", "npm:4.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["tmpl", [\
         ["npm:1.0.5", {\
           "packageLocation": "./.yarn/cache/tmpl-npm-1.0.5-d399ba37e2-cd922d9b85.zip/node_modules/tmpl/",\
@@ -17816,13 +17816,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/user-event", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:13.5.0"],\
             ["axios", "npm:1.3.4"],\
             ["eslint-config-react-app", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:7.0.1"],\
-            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:18.2.0"],\
             ["react-icons", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:4.8.0"],\
             ["react-router-dom", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:6.9.0"],\
             ["react-scripts", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:5.0.1"],\
             ["tailwindcss", "virtual:0ee08c906391e2905e58012789038b142b3b38f654ed67a311c73fa395b4ad4602bc97816fe5305ceca333fb00311bce571b430e3401d03d04f5ddcf41deb6dc#npm:3.2.7"],\
+            ["timeago.js", "npm:4.0.2"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
           "linkType": "SOFT"\
