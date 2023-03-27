@@ -36,7 +36,9 @@ export default function VideoDetail() {
             <p className="text-lg font-semibold text-gray-400">
               {channelTitle}
             </p>
-            <pre className="mt-8 whitespace-pre-wrap">{description}</pre>
+            <pre className="break-words mt-8 whitespace-pre-wrap">
+              {description}
+            </pre>
           </div>
         </div>
 
