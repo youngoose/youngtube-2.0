@@ -1,13 +1,14 @@
 import React, { useLayoutEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import RelatedVideos from './RelatedVideos';
+import ChannelInfo from './ChannelInfo';
 
 export default function VideoDetail() {
   const { videoId } = useParams();
   const {
     state: { video },
   } = useLocation();
-  const { title, description, channelTitle } = video.snippet;
+  const { title, description, channelId, channelTitle } = video.snippet;
   const videoURL = `https://www.youtube.com/embed/${videoId}`;
 
   const Wrapper = ({ children }) => {
@@ -33,9 +34,7 @@ export default function VideoDetail() {
 
           <div className="p-8">
             <p className="text-xl font-bold">{title}</p>
-            <p className="text-lg font-semibold text-gray-400">
-              {channelTitle}
-            </p>
+            <ChannelInfo id={channelId} title={channelTitle} />
             <pre className="break-words mt-8 whitespace-pre-wrap">
               {description}
             </pre>
@@ -43,7 +42,7 @@ export default function VideoDetail() {
         </div>
 
         <div className="basis-2/6">
-          <RelatedVideos videoId={videoId} />
+          <RelatedVideos id={videoId} />
         </div>
       </div>
     </Wrapper>

@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useYoutubeApi } from '../context/YoutubeApiContext';
 import VideoCard from './VideoCard';
 
-export default function RelatedVideos({ videoId }) {
+export default function RelatedVideos({ id }) {
   const { youtube } = useYoutubeApi();
 
   const {
@@ -11,8 +11,8 @@ export default function RelatedVideos({ videoId }) {
     error,
     data: videos,
   } = useQuery(
-    ['videos', videoId],
-    async () => youtube.relatedVideos(videoId),
+    ['videos', id],
+    async () => youtube.relatedVideos(id),
     // prevent refetching for 5 mins
     { staleTime: 1000 * 60 * 5 }
   );

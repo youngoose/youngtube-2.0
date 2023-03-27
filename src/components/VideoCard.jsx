@@ -2,10 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import decodeHtml from '../util/decodeHtml';
 import { formatAgo } from '../util/date';
+import ChannelInfo from './ChannelInfo';
 
 export default function VideoCard({ video, type }) {
   const navigate = useNavigate();
-  const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
+  const { title, thumbnails, channelId, channelTitle, publishedAt } =
+    video.snippet;
   const isList = type === 'list';
 
   return (
@@ -23,13 +25,9 @@ export default function VideoCard({ video, type }) {
         alt={title}
       />
       <div className={isList ? '' : 'my-2'}>
-        <p className="font-bold mb-2 hover:text-gray-400">
-          {decodeHtml(title)}
-        </p>
-        <p className="pb-4 text-gray-400 font-semibold text-sm">
-          {channelTitle}
-        </p>
-        <p className="text-sm">{formatAgo(publishedAt)}</p>
+        <p className="font-bold hover:text-gray-400">{decodeHtml(title)}</p>
+        <ChannelInfo id={channelId} title={channelTitle} />
+        <p className="pt-4 text-sm">{formatAgo(publishedAt)}</p>
       </div>
     </li>
   );
