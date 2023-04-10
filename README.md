@@ -14,7 +14,7 @@ The purpose of developing this 2nd version is to enhance and refactor based on n
 
 <br>
 
-## Development plan for version 2.0.0 enhancement based on version 1.0.0 - WIP with commit links
+## Development plan for version 2.0.0 enhancement based on version 1.0.0
 
 - [implement axios](https://github.com/youngoose/youngtube-2.0/commit/1f807d829707317d54f80689031a339799dff9c0#diff-72f82764e3be2411c0490c984464cea6901ac12931a74761fadec9f2443895ca)
 - [hide key to .env and use it with axios](https://github.com/youngoose/youngtube-2.0/commit/1f807d829707317d54f80689031a339799dff9c0)
